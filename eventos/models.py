@@ -14,9 +14,9 @@ class Participante(models.Model):
     nome = models.CharField(max_length=255) 
     email = models.CharField(max_length=255) 
     celular = models.CharField(max_length=12)
-    tipo = models.CharField(max_length=20)
+    tipo = models.CharField(max_length=20, choices= [('palestrante', 'Palestrante'), ('estudante', 'Estudante'), ('convidado', 'Convidado'),])
     evento = models.ManyToManyField(Evento)
-
+    
     def __str__(self):
         return self.nome  
     
@@ -28,6 +28,7 @@ class Atividade(models.Model):
     hora_fim = models.TimeField()
     eventos = models.ForeignKey(Evento,on_delete=models.CASCADE)
     responsavel = models.ForeignKey(Participante,on_delete=models.CASCADE)
+    tipo = models.CharField(max_length=255, choices= [('workshop', 'Workshop'), ('palestra', 'Palestra'), ('mesa redonda', 'Mesa Redonda'), ('oficina', 'Oficina'),])
 
     def __str__(self):
         return self.titulo    
