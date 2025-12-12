@@ -142,10 +142,11 @@ eventos/
 ![Image alt](https://github.com/jhessevelyn/gestor_eventos/blob/52a0ff0605043da8c6e9a770a64d732621a26611/IMG-20251212-WA0028.jpg)
 
 📂Diagrama Entidade-Relacionamento (ER)
+![Image alt](https://github.com/jhessevelyn/gestor_eventos/blob/e4afbe67a21721ebf6ee495677b1e845427f201c/IMG-20251204-WA0044(1).jpg)
 
 8. Implementação (Deploy)
 
-FAlat 
+FALTA🛑
 
 9. Contribuição & Licença
 🤝 Contribuição
