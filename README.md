@@ -28,8 +28,8 @@
     * [ Arquitetura](#️-arquitetura)
 * [4. Funcionalidades Detalhadas](#4-funcionalidades-detalhadas)
 * [5. Modelo de Dados (Diagramas)](#5-modelo-de-dados-diagramas)
-    * [ Diagrama Entidade-Relacionamento (DER)](#diagrama-entidade-relacionamento-der)
-    * [ Diagrama Entidade-Relacionamento (ER)](#diagrama-entidade-relacionamento-er)
+    * [ Modelo conceitual (DER)](#modelo-conceitual-der)
+    * [ Modelo relacional (MR)](#modelo-relacional-mr)
 * [6. Configuração do Ambiente](#6-configuração-do-ambiente)
     * [ Pré-requisitos](#-pré-requisitos)
     * [Verificação Rápida](#verificação-rápida)
@@ -56,7 +56,7 @@ Desenvolver uma API Backend com autenticação segura para gerenciar eventos, pa
 
 ### Objetivos Específicos
 * Modelagem de Entidades: **Evento**, **Participante** e **Atividade**.
-* Implementação de Relacionamentos: 1:N, N:N e 1:1.
+* Implementação de Relacionamentos: 1:N, N:N e 1:N.
 * Criação de CRUD (Create, Read, Update, Delete) completo para todas as entidades.
 * Implementação de sistema de **autenticação JWT**
 * Desenvolvimento de **rotas de relacionamento** 
@@ -88,15 +88,15 @@ A arquitetura é organizada em camadas :
 | :--- | :--- | :--- |
 | **Eventos** | CRUD completo; Campos: `nome`, `descrição`, `data_início`, `data_fim`, `local`. | **1:N** com Atividade |
 | **Participantes** | CRUD; Tipos: `estudante`, `palestrante`, `convidado`. | **N:N** com Evento |
-| **Atividades** | Gerenciamento de atividades por evento; Tipos: `workshop`, `palestra`, `oficina`. | **1:N** com Participante (Responsável) |
+| **Atividades** | Gerenciamento de atividades por evento; Tipos: `workshop`, `palestra`, `oficina`, `mesa-redonda` | **1:N** com Participante (Responsável) |
 
 
 ## 5. Modelo de Dados (Diagramas)
 
-### 📂Diagrama Entidade-Relacionamento (DER)
+### 📂Modelo conceitual (DER)
 ![Image alt](https://github.com/jhessevelyn/gestor_eventos/blob/52a0ff0605043da8c6e9a770a64d732621a26611/IMG-20251212-WA0028.jpg)
 
-### 📂Diagrama Entidade-Relacionamento (ER)
+### 📂Modelo relacional (MR)
 ![Image alt](https://github.com/jhessevelyn/gestor_eventos/blob/e4afbe67a21721ebf6ee495677b1e845427f201c/IMG-20251204-WA0044(1).jpg)
 
 ## 6. Configuração do Ambiente
@@ -149,7 +149,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-O servidor estará acessível em ```http://127.0.0.1:8000/```
+O servidor estará acessível em ```NAO SEI 🛑🛑🛑```
 
 ## 7. Rotas Principais da API
 
