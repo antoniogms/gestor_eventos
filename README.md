@@ -15,25 +15,27 @@
 [![Website IFB](https://img.shields.io/badge/Website-IFB-%23508C3C.svg?labelColor=%23C8102E)](https://www.ifb.edu.br/) 
 [![Website ihwbr](https://img.shields.io/badge/Website-ihwbr-%23DAA520.svg?labelColor=%232E2E2E)](https://hardware.org.br/)
 
-## 📚 Índice Organizado
- * 1. Sobre o Projeto
- * 2. Objetivos
+##📚 Índice Organizado
+📚 Índice Organizado
+1. Sobre o Projeto
+2. Objetivos
    * Objetivo Geral
    * Objetivos Específicos
- * 3. Tecnologias & Arquitetura
+3. Tecnologias & Arquitetura
    * 💻 Tecnologias (Exódos Utilizados)
    * 🏛️ Arquitetura
- * 4. Funcionalidades Detalhadas
- * 5. Configuração do Ambiente
-   * 🔑 Pré-requisitos
-   * 🛠️ Instalação e Execução
- * 6. Modelo de Dados (Diagramas)
+4. Funcionalidades Detalhadas
+5. Modelo de Dados (Diagramas)
    * 📂 Diagrama Entidade-Relacionamento (DER)
    * 📂 Diagrama Entidade-Relacionamento (ER)
- * 7. Rotas Principais da API
- * 8. Estrutura e Modelos
+6. Configuração do Ambiente
+   * 🔑 Pré-requisitos
+   * Verificação Rápida
+   * 🛠️ Instalação e Execução
+7. Rotas Principais da API
+8. Estrutura e Modelos
    * 📂 Estrutura do Projeto
- * 9. Implementação (Deploy)
+9. Implementação (Deploy)
  
 ## 1. Sobre o Projeto
 
