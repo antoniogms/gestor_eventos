@@ -15,9 +15,7 @@
 [![Website IFB](https://img.shields.io/badge/Website-IFB-%23508C3C.svg?labelColor=%23C8102E)](https://www.ifb.edu.br/) 
 [![Website ihwbr](https://img.shields.io/badge/Website-ihwbr-%23DAA520.svg?labelColor=%232E2E2E)](https://hardware.org.br/)
 
-## 📚 Índice Organizado
-
-## 📚 Índice Organizado
+## 📚 Índice
 
 * [1. Sobre o Projeto](#1-sobre-o-projeto)
 * [2. Objetivos](#2-objetivos)
@@ -149,7 +147,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-O servidor estará acessível em ```NAO SEI 🛑🛑🛑```
+O servidor estará acessível em ```http://127.0.0.1:8000/api``` ou ```http://localhost:8000/api```
 
 ## 7. Rotas Principais da API
 
