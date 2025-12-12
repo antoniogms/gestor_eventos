@@ -80,6 +80,15 @@ Certifique-se de ter instalado:
 * Python 3.11 ou superior
 * Pip (gerenciador de pacotes)
 
+### 6. 💾 Modelo de Dados (Diagramas)
+
+📂Diagrama Entidade-Relacionamento (DER)
+![Image alt](https://github.com/jhessevelyn/gestor_eventos/blob/52a0ff0605043da8c6e9a770a64d732621a26611/IMG-20251212-WA0028.jpg)
+
+📂Diagrama Entidade-Relacionamento (ER)
+![Image alt](https://github.com/jhessevelyn/gestor_eventos/blob/e4afbe67a21721ebf6ee495677b1e845427f201c/IMG-20251204-WA0044(1).jpg)
+
+
 **Verificação Rápida:**
 ```bash
 python --version
@@ -136,13 +145,6 @@ eventos/
 │   ├── urls.py
 │   └── wsgi.py
 
-💾 Modelo de Dados (Diagramas)
-
-📂Diagrama Entidade-Relacionamento (DER)
-![Image alt](https://github.com/jhessevelyn/gestor_eventos/blob/52a0ff0605043da8c6e9a770a64d732621a26611/IMG-20251212-WA0028.jpg)
-
-📂Diagrama Entidade-Relacionamento (ER)
-![Image alt](https://github.com/jhessevelyn/gestor_eventos/blob/e4afbe67a21721ebf6ee495677b1e845427f201c/IMG-20251204-WA0044(1).jpg)
 
 8. Implementação (Deploy)
 
@@ -150,13 +152,13 @@ FALTA🛑
 
 9. Contribuição & Licença
 🤝 Contribuição
- * Faça um fork do projeto.
- * Crie uma branch para sua funcionalidade: git checkout -b feature/MinhaNovaFeature
- * Faça commit das suas alterações: git commit -m 'feat: Adiciona nova feature X'
- * Envie para a branch original: git push origin feature/MinhaNovaFeature
- * Abra um Pull Request.
+
+FALTA 🛑
+
 📜 Licença
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE.md para mais detalhes.
+
+FALTA 🛑
+
 👨‍🏫 Professor/Orientador
 Henrique Pereira de Freitas Filho (henrique.filho@ifb.edu.br)
 
