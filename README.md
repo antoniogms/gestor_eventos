@@ -15,27 +15,30 @@
 [![Website IFB](https://img.shields.io/badge/Website-IFB-%23508C3C.svg?labelColor=%23C8102E)](https://www.ifb.edu.br/) 
 [![Website ihwbr](https://img.shields.io/badge/Website-ihwbr-%23DAA520.svg?labelColor=%232E2E2E)](https://hardware.org.br/)
 
-##📚 Índice Organizado
-📚 Índice Organizado
-1. Sobre o Projeto
-2. Objetivos
-   * Objetivo Geral
-   * Objetivos Específicos
-3. Tecnologias & Arquitetura
-   * 💻 Tecnologias (Exódos Utilizados)
-   * 🏛️ Arquitetura
-4. Funcionalidades Detalhadas
-5. Modelo de Dados (Diagramas)
-   * 📂 Diagrama Entidade-Relacionamento (DER)
-   * 📂 Diagrama Entidade-Relacionamento (ER)
-6. Configuração do Ambiente
-   * 🔑 Pré-requisitos
-   * Verificação Rápida
-   * 🛠️ Instalação e Execução
-7. Rotas Principais da API
-8. Estrutura e Modelos
-   * 📂 Estrutura do Projeto
-9. Implementação (Deploy)
+## 📚 Índice Organizado
+
+## 📚 Índice Organizado
+
+* [1. Sobre o Projeto](#1-sobre-o-projeto)
+* [2. Objetivos](#2-objetivos)
+    * [Objetivo Geral](#objetivo-geral)
+    * [Objetivos Específicos](#objetivos-específicos)
+* [3. Tecnologias & Arquitetura](#3-tecnologias--arquitetura)
+    * [ Tecnologias (Exódos Utilizados)](#-tecnologias-exódos-utilizados)
+    * [ Arquitetura](#️-arquitetura)
+* [4. Funcionalidades Detalhadas](#4-funcionalidades-detalhadas)
+* [5. Modelo de Dados (Diagramas)](#5-modelo-de-dados-diagramas)
+    * [ Diagrama Entidade-Relacionamento (DER)](#diagrama-entidade-relacionamento-der)
+    * [ Diagrama Entidade-Relacionamento (ER)](#diagrama-entidade-relacionamento-er)
+* [6. Configuração do Ambiente](#6-configuração-do-ambiente)
+    * [ Pré-requisitos](#-pré-requisitos)
+    * [Verificação Rápida](#verificação-rápida)
+    * [ Instalação e Execução](#️-instalação-e-execução)
+* [7. Rotas Principais da API](#7-rotas-principais-da-api)
+* [8. Estrutura e Modelos](#8-estrutura-e-modelos)
+    * [ Estrutura do Projeto](#-estrutura-do-projeto)
+* [9. Implementação (Deploy)](#9-implementação-deploy)
+
  
 ## 1. Sobre o Projeto
 
@@ -88,7 +91,7 @@ A arquitetura é organizada em camadas :
 | **Atividades** | Gerenciamento de atividades por evento; Tipos: `workshop`, `palestra`, `oficina`. | **1:N** com Participante (Responsável) |
 
 
-## 5. 💾 Modelo de Dados (Diagramas)
+## 5. Modelo de Dados (Diagramas)
 
 ### 📂Diagrama Entidade-Relacionamento (DER)
 ![Image alt](https://github.com/jhessevelyn/gestor_eventos/blob/52a0ff0605043da8c6e9a770a64d732621a26611/IMG-20251212-WA0028.jpg)
@@ -109,15 +112,15 @@ python --version
 pip --version
 ```
 
-🛠️ Instalação e Execução
+### 🛠️ Instalação e Execução
 Siga os passos abaixo para configurar o ambiente local:
-1. Clone o repositório:
+6.1 Clone o repositório:
 ```
 git clone [https://github.com/usuario/projeto_api.git](https://github.com/usuario/projeto_api.git)
 cd projeto_api
 ```
 
-2. Crie e Ative um Ambiente Virtual:
+6.2 Crie e Ative um Ambiente Virtual:
 ```
 python -m venv venv
 ```
@@ -129,15 +132,15 @@ source venv/bin/activate
 # Windows
 venv\Scripts\activate     
 ```
-3. Instale as Dependências:
+6.3 Instale as Dependências:
 ```
 pip install -r requirements.txt
 ````
-4. Configure as Variáveis de Ambiente:
+6.4 Configure as Variáveis de Ambiente:
 ```
 cp .env.example .env
 ```
-6. Aplique as Migrações e Inicie o Servidor:
+6.5 Aplique as Migrações e Inicie o Servidor:
 ```
 python manage.py migrate
 ```
@@ -147,7 +150,7 @@ python manage.py runserver
 
 O servidor estará acessível em ```http://127.0.0.1:8000/```
 
-7. Rotas Principais da API
+## 7. Rotas Principais da API
 
 | Método | Endpoint (Exemplo) | Descrição | Autenticação |
 |---|---|---|---|
@@ -157,8 +160,8 @@ O servidor estará acessível em ```http://127.0.0.1:8000/```
 | POST | /api/auth/token/ | Obter Token JWT | Não Aplicável |
 | GET | /api/dashboard/ | Rota Composta A-B-C (Visão Gerencial) | Requerida |
 
-8. Estrutura e Modelos
-📂 Estrutura do Projeto
+## 8. Estrutura e Modelos
+### 📂 Estrutura do Projeto
 ```
 eventos/
 ├── __init__.py
@@ -175,6 +178,6 @@ eventos/
 │   └── wsgi.py
 ```
 
-9. Implementação (Deploy)
+## 9. Implementação (Deploy)
 
 FALTA🛑
