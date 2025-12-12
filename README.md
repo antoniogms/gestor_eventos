@@ -1,171 +1,160 @@
-# gestor_eventos
 
-### Orientador Henrique Pereira de Freitas Filho
-Contato:  henrique.filho@ifb.edu.br
+# 🐱‍🏍 Sistema de Gestão de Eventos - API Django REST
 
-
-🐱‍🏍 Sistema de Gestão de Eventos - API Django REST
+### Orientador
+**Henrique Pereira de Freitas Filho** (Contato: henrique.filho@ifb.edu.br)
 
 ![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
 ![Django](https://img.shields.io/badge/Django-5.0-green)
+![DRF](https://img.shields.io/badge/DRF-3.15-red)
 ![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-> API RESTful para gestão completa de eventos, participantes e atividades. Desenvolvida como Projeto Integrador.
+## 📚 Índice
 
-## Índice
+* [1. Sobre o Projeto](#1-sobre-o-projeto)
+* [2. Objetivos](#2-objetivos)
+* [3. Tecnologias & Arquitetura](#3-tecnologias--arquitetura)
+* [4. Funcionalidades Detalhadas](#4-funcionalidades-detalhadas)
+* [5. Configuração do Ambiente](#5-configuração-do-ambiente)
+* [6. Rotas Principais da API](#6-rotas-principais-da-api)
+* [7. Estrutura e Modelos](#7-estrutura-e-modelos)
+* [8. Implementação (Deploy)](#8-implementação-deploy)
+* [9. Contribuição & Licença](#9-contribuição--licença)
 
-- [## Índice]
+## 1. Sobre o Projeto
 
-- [Sobre o Projeto](#sobre-o-projeto)
-- [Objetivos](#objetivos)
-- [Funcionalidades](#funcionalidades)
-- [Arquitetura](#arquitetura)
-- [Tecnologias](#tecnologias)
-- [Pré-requisitos](#pré-requisitos)
-- [Verificação](#verificação)
-- [Instalação](#instalação)
-- [Execução](#execução)
-- [Testes](#testes)
-- [Rotas da API](#rotas-da-api)
-- [Autenticação](#autenticação)
-- [Modelo de Dados](#modelo-de-dados)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Documentação da API](#documentação-da-api)
-- [Configuração do Ambiente](#configuração-do-ambiente)
-- [Diagramas](#diagramas)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
-- [Professor](#professor)
-
-## Sobre o Projeto
-
-O **Sistema de Gestão de Eventos** é uma API desenvolvida em Django REST Framework para gerenciar eventos acadêmicos e corporativos. A solução permite o cadastro de eventos, participantes e atividades, com relacionamentos bem definidos entre as entidades.
+O **Sistema de Gestão de Eventos** é uma API desenvolvida em Django REST Framework para gerenciamento de eventos acadêmicos e corporativos. A solução permite o cadastro de eventos, participantes e atividades, com relacionamentos bem definidos entre as entidades.
 
 **Contexto:** Muitos organizadores de eventos ainda utilizam planilhas e formulários desconexos, o que gera falhas e dificuldade de gestão.
 
 **Solução:** Centralizar todas as operações em uma API robusta e escalável.
 
-## Objetivos
+
+## 2. Objetivos
 
 ### Objetivo Geral
-Desenvolver uma API Backend com autenticação para gerenciar eventos, participantes, atividades e seus relacionamentos.
+Desenvolver uma API Backend com autenticação segura para gerenciar eventos, participantes, atividades e seus relacionamentos. 
 
 ### Objetivos Específicos
-- Modelar entidades: Evento, Participante e Atividade
-- Implementar relacionamentos: 1:N, N:N e 1:1
-- Criar CRUD completo para todas as entidades
-- Implementar sistema de autenticação
-- Desenvolver rotas de relacionamento (mínimo 3)
-- Criar rota composta A-B-C (dashboard)
+* Modelagem de Entidades: **Evento**, **Participante** e **Atividade**.
+* Implementação de Relacionamentos: 1:N, N:N e 1:1.
+* Criação de CRUD (Create, Read, Update, Delete) completo para todas as entidades.
+* Implementação de sistema de **autenticação JWT**
+* Desenvolvimento de **rotas de relacionamento** 
+* Criação de **rota composta A-B-C**
 
-## Funcionalidades
 
-### Gestão de Eventos
-- Criar, listar, atualizar e excluir eventos
-- Campos: nome, descrição, data_início, data_fim, local
+## 3. Tecnologias & Arquitetura
 
-### Gestão de Participantes
-- CRUD de participantes com tipos: estudante, palestrante, convidado
-- Inscrição em múltiplos eventos (N:N)
+### 💻 Tecnologias (Exódos Utilizados)
+| Categoria | Tecnologia | Versão | Propósito |
+| :--- | :--- | :--- | :--- |
+| **Backend** | Python | 3.11+ | Linguagem principal |
+| **Web Framework** | Django | 5.0 | Estrutura web principal |
+| **API** | Django REST Framework | 3.15 | Toolkit para construção de APIs REST |
+| **Autenticação** | Simple JWT | 5.3 | Gerenciamento de tokens de acesso |
+| **Ferramentas** | Git, VS Code | - | Controle de versão e Ambiente de Desenvolvimento |
 
-### Gestão de Atividades
-- Gerenciamento de atividades por evento
-- Designação de responsável (1:1)
-- Tipos: workshop, palestra, oficina
+### 🏛️ Arquitetura
+A arquitetura é organizada em camadas :
 
-### Relacionamentos
-- **1:N** - Evento → Atividade
-- **N:N** - Evento ↔ Participante
-- **1:1** - Atividade → Participante (responsável)
+* Camada de API: Endpoints REST 
+* Camada de negócios: Visualizações e serializadores
+* Camada de Dados: Modelos Django 
+* Camada de autenticação: Autenticação JWT).
 
-## Arquitetura
+## 4. Funcionalidades Detalhadas
 
-**Camadas:**
-- **API Layer**: Endpoints REST
-- **Business Layer**: Views e Serializers
-- **Data Layer**: Models Django
-- **Auth Layer**: JWT Authentication
+| Entidade | Funcionalidade Principal | Relacionamento |
+| :--- | :--- | :--- |
+| **Eventos** | CRUD completo; Campos: `nome`, `descrição`, `data_início`, `data_fim`, `local`. | **1:N** com Atividade |
+| **Participantes** | CRUD; Tipos: `estudante`, `palestrante`, `convidado`. | **N:N** com Evento |
+| **Atividades** | Gerenciamento de atividades por evento; Tipos: `workshop`, `palestra`, `oficina`. | **1:N** com Participante (Responsável) |
 
-- ## Tecnologias
 
-### Backend
-- Python 3.11+
-- Django 5.0
-- Django REST Framework 3.15
-- Simple JWT 5.3
+## 5. Configuração do Ambiente
 
-### Ferramentas
-- Git
-- VS Code
+### 🔑 Pré-requisitos
+Certifique-se de ter instalado:
+* Python 3.11 ou superior
+* Pip (gerenciador de pacotes)
 
-## Pré-requisitos
-
-- Python 3.11 ou superior
-- Pip (gerenciador de pacotes)
-- Git (opcional)
-- 500MB de espaço livre
-
-### Verificação
+**Verificação Rápida:**
 ```bash
 python --version
 pip --version
 
-
-### Diagrama de Banco de Dados
-
-Endpoints Principais
-Método	Endpoint	Descrição	Autenticação
-GET	/api/items/	Lista todos os itens	Opcional
-POST	/api/items/	Cria um novo item	Requerida
-GET	/api/items/{id}/	Recupera um item específico	Opcional
-
-### Configuração do Ambiente
-Siga os passos abaixo para configurar o ambiente local.
-
-## Clone o repositório:
-
-git clone https://github.com/usuario/projeto_api.git
+🛠️ Instalação e Execução
+Siga os passos abaixo para configurar o ambiente local:
+1. Clone o repositório:
+git clone [https://github.com/usuario/projeto_api.git](https://github.com/usuario/projeto_api.git)
 cd projeto_api
 
-## Crie um ambiente virtual:
-
+2. Crie e Ative um Ambiente Virtual:
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-Instale as dependências:
+# Linux/Mac
+source venv/bin/activate  
+# Windows
+venv\Scripts\activate     
 
+3. Instale as Dependências:
 pip install -r requirements.txt
 
-## Configure as variáveis de ambiente:
-
+4. Configure as Variáveis de Ambiente:
 cp .env.example .env
-# Edite .env com suas credenciais
-Aplique as migrações e inicie o servidor:
 
+5. Aplique as Migrações e Inicie o Servidor:
 python manage.py migrate
 python manage.py runserver
 
-### Deploy(opcional)
-Plataforma Recomendada: [Render / Railway / AWS]
-Prepare o Procfile:
+O servidor estará acessível em http://127.0.0.1:8000/.
 
-web: gunicorn projeto.wsgi:application --log-file -
+6. Rotas Principais da API
 
-### Configure variáveis de ambiente na plataforma de deploy.
+| Método | Endpoint (Exemplo) | Descrição | Autenticação |
+|---|---|---|---|
+| GET | /api/eventos/ | Lista todos os eventos | Opcional/Requerida  |
+| POST | /api/participantes/ | Cria um novo participante | Requerida |
+| GET | /api/eventos/{id}/ | Recupera um evento específico | Opcional |
+| POST | /api/auth/token/ | Obter Token JWT | Não Aplicável |
+| GET | /api/dashboard/ | Rota Composta A-B-C (Visão Gerencial) | Requerida |
 
-### Execute migrações em produção:
+7. Estrutura e Modelos
+📂 Estrutura do Projeto
+eventos/
+├── __init__.py
+├── admin.py
+├── apps.py
+├── models.py
+├── serializers.py 
+├── tests.py
+├── views.py
+├── gestor_eventos/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
 
-python manage.py migrate
-Colete arquivos estáticos (se aplicável):
+💾 Modelo de Dados (Diagramas)
 
-python manage.py collectstatic
-CI/CD: Integração com GitHub Actions disponível em .github/workflows/deploy.yml.
+![Image](https://github.com/user-attachments/assets/2f356d2b-3692-4abe-a847-4e7ec61b764a)
 
+Link para o Diagrama Entidade-Relacionamento (ER)
 
+8. Implementação (Deploy)
 
+FALTA 🛑
 
-
-
-
+9. Contribuição & Licença
+🤝 Contribuição
+ * Faça um fork do projeto.
+ * Crie uma branch para sua funcionalidade: git checkout -b feature/MinhaNovaFeature
+ * Faça commit das suas alterações: git commit -m 'feat: Adiciona nova feature X'
+ * Envie para a branch original: git push origin feature/MinhaNovaFeature
+ * Abra um Pull Request.
+📜 Licença
+Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE.md para mais detalhes.
+👨‍🏫 Professor/Orientador
+Henrique Pereira de Freitas Filho (henrique.filho@ifb.edu.br)
 
