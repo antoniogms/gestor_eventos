@@ -1,14 +1,19 @@
 
 # 🐱‍🏍 Sistema de Gestão de Eventos - API Django REST
 
-### Orientador
-**Henrique Pereira de Freitas Filho** (Contato: henrique.filho@ifb.edu.br)
-
 ![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
 ![Django](https://img.shields.io/badge/Django-5.0-green)
 ![DRF](https://img.shields.io/badge/DRF-3.15-red)
 ![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
+
+
+## Orientador
+**Henrique Pereira de Freitas Filho** (Contato: henrique.filho@ifb.edu.br)
+
+## Instituições de Fomento e Parceria
+[![Website IFB](https://img.shields.io/badge/Website-IFB-%23508C3C.svg?labelColor=%23C8102E)](https://www.ifb.edu.br/) 
+[![Website ihwbr](https://img.shields.io/badge/Website-ihwbr-%23DAA520.svg?labelColor=%232E2E2E)](https://hardware.org.br/)
 
 ## 📚 Índice
 
@@ -80,16 +85,16 @@ Certifique-se de ter instalado:
 * Python 3.11 ou superior
 * Pip (gerenciador de pacotes)
 
-### 6. 💾 Modelo de Dados (Diagramas)
+## 6. 💾 Modelo de Dados (Diagramas)
 
-📂Diagrama Entidade-Relacionamento (DER)
+### 📂Diagrama Entidade-Relacionamento (DER)
 ![Image alt](https://github.com/jhessevelyn/gestor_eventos/blob/52a0ff0605043da8c6e9a770a64d732621a26611/IMG-20251212-WA0028.jpg)
 
-📂Diagrama Entidade-Relacionamento (ER)
+### 📂Diagrama Entidade-Relacionamento (ER)
 ![Image alt](https://github.com/jhessevelyn/gestor_eventos/blob/e4afbe67a21721ebf6ee495677b1e845427f201c/IMG-20251204-WA0044(1).jpg)
 
 
-**Verificação Rápida:**
+** Verificação Rápida:**
 ```bash
 python --version
 pip --version
@@ -133,7 +138,7 @@ python manage.py runserver
 
 O servidor estará acessível em ```http://127.0.0.1:8000/```
 
-6. Rotas Principais da API
+7. Rotas Principais da API
 
 | Método | Endpoint (Exemplo) | Descrição | Autenticação |
 |---|---|---|---|
@@ -143,7 +148,7 @@ O servidor estará acessível em ```http://127.0.0.1:8000/```
 | POST | /api/auth/token/ | Obter Token JWT | Não Aplicável |
 | GET | /api/dashboard/ | Rota Composta A-B-C (Visão Gerencial) | Requerida |
 
-7. Estrutura e Modelos
+8. Estrutura e Modelos
 📂 Estrutura do Projeto
 eventos/
 ├── __init__.py
@@ -160,18 +165,18 @@ eventos/
 │   └── wsgi.py
 
 
-8. Implementação (Deploy)
+9. Implementação (Deploy)
 
 FALTA🛑
 
-9. Contribuição & Licença
+10. Contribuição & Licença
 🤝 Contribuição
 
-FALTA 🛑
+11. FALTA 🛑
 
 📜 Licença
 
-FALTA 🛑
+12. FALTA 🛑
 
 👨‍🏫 Professor/Orientador
 Henrique Pereira de Freitas Filho (henrique.filho@ifb.edu.br)
