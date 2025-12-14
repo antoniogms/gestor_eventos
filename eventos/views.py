@@ -71,7 +71,7 @@ class EventoViewSet(viewsets.ModelViewSet):
         participantes_qs = evento.participantes.all()
 
         evento_data = EventoNestedSerializer(evento).data
-        atividade_data = AtividadeNestedSerializer(atividade_qs, many=True).data
+        atividade_data = AtividadeEventoSerializer(atividade_qs, many=True).data
         participantes_data = ParticipanteSerializer(participantes_qs, many=True).data
 
         payload = {
