@@ -58,7 +58,6 @@ Desenvolver uma API Backend com autenticação segura para gerenciar eventos, pa
 * Criação de CRUD (Create, Read, Update, Delete) completo para todas as entidades.
 * Implementação de sistema de **autenticação JWT**
 * Desenvolvimento de **rotas de relacionamento** 
-* Criação de **rota composta A-B-C**
 
 
 ## 3. Tecnologias & Arquitetura
@@ -78,7 +77,8 @@ A arquitetura é organizada em camadas :
 * Camada de API: Endpoints REST 
 * Camada de negócios: Visualizações e serializadores
 * Camada de Dados: Modelos Django 
-* Camada de autenticação: Autenticação JWT).
+* Camada de autenticação: TokenAuthentication (DRF)
+  
 
 ## 4. Funcionalidades Detalhadas
 
@@ -156,8 +156,9 @@ O servidor estará acessível em ```http://127.0.0.1:8000/api``` ou ```http://lo
 | GET | /api/eventos/ | Lista todos os eventos | Opcional/Requerida  |
 | POST | /api/participantes/ | Cria um novo participante | Requerida |
 | GET | /api/eventos/{id}/ | Recupera um evento específico | Opcional |
-| POST | /api/auth/token/ | Obter Token JWT | Não Aplicável |
-| GET | /api/dashboard/ | Rota Composta A-B-C (Visão Gerencial) | Requerida |
+| POST | /api/atividade/ |Cria uma nova atividade | Requerida |
+| DELETE | /api/atividade/{id}/ |Deleta uma atividade | Requerida |
+
 
 ## 8. Estrutura e Modelos
 ### 📂 Estrutura do Projeto
@@ -180,6 +181,6 @@ eventos/
 ## 9. Implementação (Deploy)
 
 ```
-(https://gestor-eventos.duckdns.org/api/)
+https://gestor-eventos.duckdns.org/api/
 
 ```
