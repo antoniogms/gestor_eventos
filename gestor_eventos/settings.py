@@ -148,23 +148,42 @@ SPECTACULAR_SETTINGS = {
 'DESCRIPTION': inspect.cleandoc("""
 ## Bem-vindo à gestor_eventos!  
                              
- ### Eventos
+### Eventos
 - **Listar eventos** (`GET /api/eventos/`) sem autenticação
 - **Criar eventos** (`POST /api/eventos/`) com autenticação
 - **Atualizar eventos** (`PUT/PATCH /api/eventos/{id}/`) com autenticação
 - **Excluir eventos** (`DELETE /api/eventos/{id}/`) com autenticação
-        
+
+#### Participantes de um evento (N:N)
+- **Listar participantes de um evento** (`GET /api/eventos/{id}/participantes/`) sem autenticação
+- **Inscrever participante em um evento** (`POST /api/eventos/{id}/participantes/`) com autenticação
+
+#### Atividades de um evento (1:N)
+- **Listar atividades de um evento** (`GET /api/eventos/{id}/atividades/`) sem autenticação
+- **Criar atividade vinculada a um evento** (`POST /api/eventos/{id}/atividades/`) com autenticação
+
+#### Dashboard do evento (rota composta A-B-C)
+- **Visualizar dashboard do evento** (`GET /api/eventos/{id}/dashboard/`) sem autenticação  
+  - Retorna os dados do evento  
+  - Lista de atividades do evento  
+  - Responsável associado a cada atividade  
+  - Lista de participantes inscritos no evento
+
 ### Participantes
 - **Listar participantes** (`GET /api/participantes/`) sem autenticação
 - **Criar participantes** (`POST /api/participantes/`) com autenticação
 - **Atualizar participantes** (`PUT/PATCH /api/participantes/{id}/`) com autenticação
 - **Excluir participantes** (`DELETE /api/participantes/{id}/`) com autenticação
                                  
- ### Atividades
+### Atividades
 - **Listar atividades** (`GET /api/atividades/`) sem autenticação
 - **Criar atividades** (`POST /api/atividades/`) com autenticação
 - **Atualizar atividades** (`PUT/PATCH /api/atividades/{id}/`) com autenticação
 - **Excluir atividades** (`DELETE /api/atividades/{id}/`) com autenticação
+
+#### Responsável por uma atividade (1:1)
+- **Consultar responsável da atividade** (`GET /api/atividades/{id}/responsavel/`) sem autenticação
+- **Definir ou alterar responsável da atividade** (`PUT /api/atividades/{id}/responsavel/`) com autenticação
 
                          
  ### Autenticação
