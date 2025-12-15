@@ -178,7 +178,33 @@ eventos/
 │   └── wsgi.py
 ```
 
-## 9. Implementação (Deploy)
+## 9. Deploy da aplicação gestor_eventos
+
+O deploy da aplicação **gestor_eventos** foi realizado em um servidor **Linux Ubuntu** provisionado na **Linode**, com o objetivo de disponibilizar a API para acesso externo e apresentação do projeto.
+
+### Ambiente
+- Servidor: Linode (VPS)
+- Sistema operacional: Ubuntu
+- Linguagem: Python
+- Framework: Django + Django REST Framework
+
+### Domínio e DNS
+- Utilização de um domínio gratuito via **DuckDNS**
+- O domínio foi configurado para apontar para o IP público do servidor
+
+### Servidor de aplicação
+- A aplicação Django é executada com **Gunicorn**, responsável por servir a aplicação WSGI
+- O **Nginx** atua como proxy reverso, encaminhando as requisições HTTP/HTTPS para o Gunicorn
+
+### Certificado SSL
+- Configuração de certificado HTTPS gratuito utilizando **Let’s Encrypt**
+- Emissão e renovação automática do certificado via **Certbot**
+- A aplicação passou a ser acessada de forma segura (HTTPS)
+
+### Resultado
+- API acessível publicamente via domínio
+- Comunicação segura com HTTPS
+- Estrutura simples e funcional, suficiente para demonstração acadêmica do projeto
 
 ```
 https://gestor-eventos.duckdns.org/api/
