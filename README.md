@@ -106,8 +106,6 @@ gestor_eventos/
 ### Modelo Lógico
 ![Modelo Lógico do Banco de Dados](./docs/modelo-logico.jpg)
 
-> **Descrição:** Inclua um diagrama ER (Entidade-Relacionamento) gerado por ferramentas como `django-extensions` ou `pygraphviz`. Descreva as principais entidades, relacionamentos e campos críticos.
-
 ## Documentação da API
 
 A documentação interativa está disponível em `/api/docs/` (Swagger UI) ou `/api/redoc/` (ReDoc) no ambiente de desenvolvimento.
